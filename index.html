@@ -1,0 +1,553 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Embaixadores do Python — Trabalho de Linguagens</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <a class="brand" href="#inicio" aria-label="Ir para o início">
+        <span class="brand__dot" aria-hidden="true"></span>
+        <span class="brand__text">Embaixadores do Python</span>
+      </a>
+      <nav class="nav">
+        <a href="#tiobe">TIOBE</a>
+        <a href="#historia">História</a>
+        <a href="#licenca">Licença</a>
+        <a href="#onde-usa">Onde usa</a>
+        <a href="#comandos">Comandos</a>
+        <a href="#exemplo">Exemplo</a>
+        <a href="#console">Console</a>
+        <a href="#referencias">Referências</a>
+      </nav>
+      <button class="menuBtn" id="menuBtn" aria-label="Abrir menu">☰</button>
+    </div>
+    <div class="mobileNav" id="mobileNav">
+      <a href="#tiobe">TIOBE</a>
+      <a href="#historia">História</a>
+      <a href="#licenca">Licença</a>
+      <a href="#onde-usa">Onde usa</a>
+      <a href="#comandos">Comandos</a>
+      <a href="#exemplo">Exemplo</a>
+      <a href="#console">Console</a>
+      <a href="#referencias">Referências</a>
+    </div>
+  </header>
+
+  <main id="inicio">
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <div class="pill">
+            <span class="pulse" aria-hidden="true"></span>
+            <span>Trabalho • Linguagem: <strong>Python</strong></span>
+          </div>
+
+          <h1>
+            Python: a linguagem <span class="grad">versátil</span> que domina
+            <span class="grad2">mercado, IA e produtividade</span>.
+          </h1>
+
+          <p class="lead">
+            Defesa do Python com dados técnicos e de mercado, além de comandos-chave e um programa de exemplo.
+          </p>
+
+          <div class="hero__ctas">
+            <a class="btn btn--primary" href="#tiobe">Ver dados (TIOBE)</a>
+            <a class="btn btn--ghost" href="#console">Rodar Python no site</a>
+          </div>
+
+          <div class="hero__stats">
+            <div class="stat">
+              <div class="stat__kpi" id="kpiTiobeRank">#1</div>
+              <div class="stat__label">TIOBE (Fev/2026)</div>
+            </div>
+            <div class="stat">
+              <div class="stat__kpi"><span id="kpiTiobeShare">21.81</span>%</div>
+              <div class="stat__label">Participação TIOBE</div>
+            </div>
+            <div class="stat">
+              <div class="stat__kpi"><span id="kpiSO">57.9</span>%</div>
+              <div class="stat__label">Uso (Stack Overflow 2025)</div>
+            </div>
+          </div>
+
+          <div class="note">
+            <strong>Integrantes:</strong> Lucas Miranda dos Santos • Pedro Gonçalves da Cruz • Leonardo Borges Cantelle
+          </div>
+        </div>
+
+        <div class="hero__card">
+          <div class="card card--glow">
+            <div class="card__header">
+              <div>
+                <div class="card__title">Por que Python?</div>
+                <div class="card__subtitle">Impacto alto com curva de aprendizado baixa</div>
+              </div>
+              <div class="badge">Destaque</div>
+            </div>
+
+            <div class="reasons">
+              <div class="reason">
+                <div class="reason__icon">⚡</div>
+                <div>
+                  <div class="reason__t">Produtividade</div>
+                  <div class="reason__d">Sintaxe clara e menos código para entregar resultado.</div>
+                </div>
+              </div>
+              <div class="reason">
+                <div class="reason__icon">🧠</div>
+                <div>
+                  <div class="reason__t">IA & Dados</div>
+                  <div class="reason__d">Ecossistema forte para análise, ML e automação.</div>
+                </div>
+              </div>
+              <div class="reason">
+                <div class="reason__icon">🌍</div>
+                <div>
+                  <div class="reason__t">Mercado</div>
+                  <div class="reason__d">Alta popularidade e uso em múltiplas áreas.</div>
+                </div>
+              </div>
+              <div class="reason">
+                <div class="reason__icon">🔧</div>
+                <div>
+                  <div class="reason__t">Versatilidade</div>
+                  <div class="reason__d">Web, scripts, APIs, automação, ciência e mais.</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mini">
+              <div class="mini__title">Pitch (curto)</div>
+              <div class="mini__body">
+                “Se a meta é aprender rápido, produzir mais e ter força em IA e automação, Python é a escolha mais estratégica.”
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__bg" aria-hidden="true"></div>
+    </section>
+
+    <section class="section" id="tiobe">
+      <div class="container">
+        <div class="section__head">
+          <h2>TIOBE Top 20 — Fevereiro/2026</h2>
+          <p>Ranking de popularidade (mensal). Em fevereiro/2026, Python aparece em #1 com 21,81%.</p>
+        </div>
+
+        <div class="panel">
+          <div class="panel__tools">
+            <div class="tool">
+              <label for="searchLang">Filtrar</label>
+              <input id="searchLang" type="text" placeholder="Ex.: Python, Java, C++..." autocomplete="off" />
+            </div>
+            <div class="tool">
+              <label for="sortBy">Ordenar</label>
+              <select id="sortBy">
+                <option value="rank">Rank</option>
+                <option value="rating">Rating</option>
+                <option value="name">Nome</option>
+              </select>
+            </div>
+            <div class="tool tool--right">
+              <button class="btn btn--small" id="resetBtn">Reset</button>
+            </div>
+          </div>
+
+          <div class="tableWrap" role="region" aria-label="Tabela TIOBE Top 20" tabindex="0">
+            <table class="table" id="tiobeTable">
+              <thead>
+                <tr>
+                  <th>Rank (Fev/2026)</th>
+                  <th>Linguagem</th>
+                  <th>Rating</th>
+                  <th>Tendência (vs Fev/2025)</th>
+                </tr>
+              </thead>
+              <tbody id="tiobeBody"></tbody>
+            </table>
+          </div>
+
+          <div class="callout">Fonte: TIOBE Index (Top 20).</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="historia">
+      <div class="container">
+        <div class="section__head">
+          <h2>História & Criador</h2>
+          <p>Python foi criado por Guido van Rossum e teve seu primeiro release público em 1991.</p>
+        </div>
+
+        <div class="grid2">
+          <div class="card">
+            <h3>Quem foi o criador?</h3>
+            <p><strong>Guido van Rossum</strong> iniciou o projeto no fim de 1989. A primeira versão pública é de <strong>1991</strong>.</p>
+            <div class="chips">
+              <span class="chip">Criador: Guido van Rossum</span>
+              <span class="chip">Início: 1989</span>
+              <span class="chip">1ª versão: 1991</span>
+              <span class="chip">Foco: legibilidade</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Marcos (resumo)</h3>
+            <div class="timeline">
+              <div class="trow">
+                <div class="tdot"></div>
+                <div class="tcontent">
+                  <div class="tdate">1989–1991</div>
+                  <div class="ttitle">Nascimento</div>
+                  <div class="tdesc">Projeto começa e vira release público.</div>
+                </div>
+              </div>
+              <div class="trow">
+                <div class="tdot"></div>
+                <div class="tcontent">
+                  <div class="tdate">2001</div>
+                  <div class="ttitle">Python Software Foundation</div>
+                  <div class="tdesc">A PSF passa a apoiar e manter o ecossistema.</div>
+                </div>
+              </div>
+              <div class="trow">
+                <div class="tdot"></div>
+                <div class="tcontent">
+                  <div class="tdate">2019</div>
+                  <div class="ttitle">Steering Council</div>
+                  <div class="tdesc">Governança moderna com conselho da comunidade.</div>
+                </div>
+              </div>
+              <div class="trow">
+                <div class="tdot"></div>
+                <div class="tcontent">
+                  <div class="tdate">2026</div>
+                  <div class="ttitle">Topo de popularidade</div>
+                  <div class="tdesc">Python #1 no ranking TIOBE (Fev/2026).</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel panel--soft">
+          <div class="kpis">
+            <div class="kpi">
+              <div class="kpi__n">57,9%</div>
+              <div class="kpi__t">Desenvolvedores usaram Python (Stack Overflow 2025)</div>
+            </div>
+            <div class="kpi">
+              <div class="kpi__n">#1</div>
+              <div class="kpi__t">TIOBE (Fev/2026)</div>
+            </div>
+            <div class="kpi">
+              <div class="kpi__n">Multiárea</div>
+              <div class="kpi__t">Aplicável em dados, automação, web e ferramentas</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="licenca">
+      <div class="container">
+        <div class="section__head">
+          <h2>Pública ou Proprietária?</h2>
+          <p>Python é open-source (licença da PSF), com uso permitido inclusive comercialmente.</p>
+        </div>
+
+        <div class="grid2">
+          <div class="card">
+            <h3>Tipo</h3>
+            <p>O Python é <strong>open-source</strong>, sob licença da <strong>Python Software Foundation</strong>.</p>
+            <div class="chips">
+              <span class="chip chip--ok">Open Source</span>
+              <span class="chip">PSF License</span>
+              <span class="chip">Uso comercial</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Preço de licenciamento</h3>
+            <p>Não existe custo de licença para usar Python. Você pode usar em projetos pessoais, acadêmicos e comerciais, seguindo os termos.</p>
+            <div class="alert"><strong>Resumo:</strong> sem custo de licença, com liberdade de uso e distribuição conforme a licença.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="onde-usa">
+      <div class="container">
+        <div class="section__head">
+          <h2>Onde Python é mais usado</h2>
+          <p>Generalista, com destaque em dados/IA e automações.</p>
+        </div>
+
+        <div class="areas">
+          <button class="tab active" data-tab="dados">Dados & IA</button>
+          <button class="tab" data-tab="web">Web & APIs</button>
+          <button class="tab" data-tab="auto">Automação</button>
+          <button class="tab" data-tab="devops">DevOps</button>
+          <button class="tab" data-tab="edu">Educação</button>
+        </div>
+
+        <div class="tabpanels">
+          <div class="tabpanel active" id="tab-dados">
+            <h3>Dados & IA (Machine Learning)</h3>
+            <p>Usado para análise, visualização, ML e automação de processos baseados em dados.</p>
+            <div class="meter">
+              <div class="meter__label">Aderência</div>
+              <div class="meter__bar"><span style="width:92%"></span></div>
+              <div class="meter__note">Bibliotecas e comunidade fortes.</div>
+            </div>
+          </div>
+
+          <div class="tabpanel" id="tab-web">
+            <h3>Web & APIs</h3>
+            <p>Usado para back-end, APIs e serviços, com boa velocidade de desenvolvimento.</p>
+            <div class="meter">
+              <div class="meter__label">Aderência</div>
+              <div class="meter__bar"><span style="width:78%"></span></div>
+              <div class="meter__note">Bom para MVPs e serviços.</div>
+            </div>
+          </div>
+
+          <div class="tabpanel" id="tab-auto">
+            <h3>Automação & Scripts</h3>
+            <p>Automatiza tarefas repetitivas, integrações, arquivos e rotinas do dia a dia.</p>
+            <div class="meter">
+              <div class="meter__label">Aderência</div>
+              <div class="meter__bar"><span style="width:88%"></span></div>
+              <div class="meter__note">Economia de tempo e redução de erros.</div>
+            </div>
+          </div>
+
+          <div class="tabpanel" id="tab-devops">
+            <h3>DevOps & Infra</h3>
+            <p>Scripts, pipelines, utilitários e automações de infraestrutura.</p>
+            <div class="meter">
+              <div class="meter__label">Aderência</div>
+              <div class="meter__bar"><span style="width:70%"></span></div>
+              <div class="meter__note">Ótimo para glue code.</div>
+            </div>
+          </div>
+
+          <div class="tabpanel" id="tab-edu">
+            <h3>Educação</h3>
+            <p>Primeira linguagem comum por legibilidade e baixo atrito para aprender.</p>
+            <div class="meter">
+              <div class="meter__label">Aderência</div>
+              <div class="meter__bar"><span style="width:90%"></span></div>
+              <div class="meter__note">Excelente para iniciar lógica.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="comandos">
+      <div class="container">
+        <div class="section__head">
+          <h2>Principais comandos</h2>
+          <p>O essencial para começar.</p>
+        </div>
+
+        <div class="cards3">
+          <div class="card">
+            <h3>Entrada e saída</h3>
+            <div class="code"><pre><code>nome = input("Seu nome: ")
+print("Olá,", nome)</code></pre></div>
+            <p><strong>input()</strong> lê texto do usuário. <strong>print()</strong> exibe informações.</p>
+          </div>
+
+          <div class="card">
+            <h3>Decisão</h3>
+            <div class="code"><pre><code>idade = 18
+if idade &gt;= 18:
+    print("Maior de idade")
+else:
+    print("Menor de idade")</code></pre></div>
+            <p>Define caminhos do programa com base em condições.</p>
+          </div>
+
+          <div class="card">
+            <h3>Repetição</h3>
+            <div class="code"><pre><code>for i in range(1, 6):
+    print(i)
+
+n = 3
+while n &gt; 0:
+    print("contagem:", n)
+    n -= 1</code></pre></div>
+            <p><strong>for</strong> percorre sequências. <strong>while</strong> repete enquanto a condição for verdadeira.</p>
+          </div>
+        </div>
+
+        <div class="grid2">
+          <div class="card">
+            <h3>Estruturas</h3>
+            <div class="code"><pre><code>lista = [10, 20, 30]
+tupla = ("SP", "RJ")
+conjunto = {1, 2, 2, 3}
+dicio = {"nome": "Ana", "idade": 20}</code></pre></div>
+            <ul class="bullets">
+              <li><strong>lista</strong>: ordenada e mutável</li>
+              <li><strong>tupla</strong>: ordenada e imutável</li>
+              <li><strong>set</strong>: não repete valores</li>
+              <li><strong>dict</strong>: chave → valor</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Funções e módulos</h3>
+            <div class="code"><pre><code>def soma(a, b):
+    return a + b
+
+import math
+print(soma(2, 3), math.sqrt(16))</code></pre></div>
+            <p><strong>def</strong> cria funções. <strong>import</strong> usa módulos da biblioteca padrão.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="exemplo">
+      <div class="container">
+        <div class="section__head">
+          <h2>Programa de exemplo</h2>
+          <p>Mini sistema de carrinho (lista + dicionário + funções).</p>
+        </div>
+
+        <div class="panel">
+          <div class="panel__top">
+            <div class="panel__title">Mini Carrinho em Python</div>
+            <div class="panel__actions">
+              <button class="btn btn--small" id="copyBtn">Copiar</button>
+              <button class="btn btn--small btn--primary" id="sendToConsoleBtn">Enviar para o Console</button>
+            </div>
+          </div>
+
+          <div class="code code--big" id="codeBlock">
+<pre><code>def adicionar_item(carrinho, nome, preco):
+    carrinho.append({"nome": nome, "preco": preco})
+
+def total(carrinho):
+    return sum(item["preco"] for item in carrinho)
+
+def resumo(carrinho):
+    if not carrinho:
+        return "Carrinho vazio."
+    linhas = []
+    for i, item in enumerate(carrinho, start=1):
+        linhas.append(f"{i}. {item['nome']} — R$ {item['preco']:.2f}")
+    linhas.append(f"TOTAL: R$ {total(carrinho):.2f}")
+    return "\n".join(linhas)
+
+def main():
+    carrinho = []
+    adicionar_item(carrinho, "Laço Rosa Bebê", 19.90)
+    adicionar_item(carrinho, "Kit Laços (3 un.)", 39.90)
+    adicionar_item(carrinho, "Presilha Glitter", 9.90)
+
+    print("=== RESUMO DO PEDIDO ===")
+    print(resumo(carrinho))
+
+if __name__ == "__main__":
+    main()</code></pre>
+          </div>
+
+          <div class="callout">Você pode rodar esse código no console do site logo abaixo.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="console">
+      <div class="container">
+        <div class="section__head">
+          <h2>Console Python (no navegador)</h2>
+          <p>Edite e rode Python aqui mesmo. Saída aparece abaixo.</p>
+        </div>
+
+        <div class="panel">
+          <div class="consoleTop">
+            <div class="consoleStatus">
+              <span class="dot" id="pyDot"></span>
+              <span id="pyStatus">Carregando Python...</span>
+            </div>
+            <div class="consoleBtns">
+              <button class="btn btn--small btn--primary" id="runPyBtn" disabled>Rodar</button>
+              <button class="btn btn--small" id="clearOutBtn">Limpar saída</button>
+              <button class="btn btn--small btn--ghost" id="resetPyBtn">Reset</button>
+            </div>
+          </div>
+
+          <div class="consoleGrid">
+            <div class="consoleEditor">
+              <label class="consoleLabel" for="pyEditor">Editor</label>
+              <textarea id="pyEditor" spellcheck="false">print("Olá! Python rodando no navegador.")
+for i in range(1, 4):
+    print("i =", i)</textarea>
+            </div>
+
+            <div class="consoleOutput">
+              <label class="consoleLabel" for="pyOut">Saída</label>
+              <pre id="pyOut" aria-live="polite"></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="referencias">
+      <div class="container">
+        <div class="section__head">
+          <h2>Referências</h2>
+          <p>Links usados na pesquisa.</p>
+        </div>
+
+        <div class="refs">
+          <a class="ref" href="https://www.tiobe.com/tiobe-index/" target="_blank" rel="noreferrer">
+            <div class="ref__t">TIOBE Index</div>
+            <div class="ref__d">Top 20 e ratings</div>
+          </a>
+          <a class="ref" href="https://www.python.org/about/" target="_blank" rel="noreferrer">
+            <div class="ref__t">python.org — About</div>
+            <div class="ref__d">Informações oficiais e licença</div>
+          </a>
+          <a class="ref" href="https://survey.stackoverflow.co/2025/" target="_blank" rel="noreferrer">
+            <div class="ref__t">Stack Overflow Survey 2025</div>
+            <div class="ref__d">Dados de uso do Python</div>
+          </a>
+          <a class="ref" href="https://docs.python.org/3/faq/general.html" target="_blank" rel="noreferrer">
+            <div class="ref__t">Python Docs — FAQ</div>
+            <div class="ref__d">Informações gerais</div>
+          </a>
+        </div>
+
+        <footer class="footer">
+          <div class="footer__left">
+            <div class="footer__brand">Embaixadores do Python</div>
+            <div class="footer__small">Trabalho: Pesquisa sobre Linguagens de Programação • Data: 03/02/2026</div>
+          </div>
+          <div class="footer__right">
+            <span class="pill pill--soft">Site pronto</span>
+          </div>
+        </footer>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/pyodide/v0.25.1/full/pyodide.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>
